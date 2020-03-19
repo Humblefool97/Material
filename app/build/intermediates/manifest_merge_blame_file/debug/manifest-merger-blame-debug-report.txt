@@ -1,0 +1,48 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.materialdesign"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:5:5-19:19
+12        android:allowBackup="true"
+12-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:6:13-39
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.2.0] /Users/rkalkunteranganathan/.gradle/caches/transforms-2/files-2.1/4aafda5be1f4dfcf5232a4a3a673ee23/core-1.2.0/AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:extractNativeLibs="false"
+16        android:icon="@mipmap/ic_launcher"
+16-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:7:13-47
+17        android:label="@string/app_name"
+17-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:8:13-45
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:9:13-58
+19        android:supportsRtl="true"
+19-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:10:13-39
+20        android:testOnly="true"
+21        android:theme="@style/AppTheme" >
+21-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:11:13-44
+22        <activity android:name="com.example.materialdesign.MainActivity" >
+22-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:12:9-18:20
+22-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:12:19-47
+23            <intent-filter>
+23-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:13:13-17:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:14:17-69
+24-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:14:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:16:17-77
+26-->/Users/rkalkunteranganathan/Documents/MaterialDesign/app/src/main/AndroidManifest.xml:16:27-74
+27            </intent-filter>
+28        </activity>
+29    </application>
+30
+31</manifest>
