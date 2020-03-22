@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SharedElementTransition</string>
+    <string name="transition_string_image">tImage</string>
+</resources>

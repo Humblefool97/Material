@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="imageDesc">
+        <item>Assassins Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft.
+            It is the tenth major installment in the Assassins Creed series and the successor to 2015s Assassins Creed Syndicate.</item>
+        <item>Days Gone is a 2019 action-adventure survival horror video game developed by SIE Bend Studio
+            and published by Sony Interactive Entertainment for the ...</item>
+        <item>Marvels Spider-Man is a 2018 action-adventure game developed by Insomniac Games and ... Insomniac had recently released its Xbox One-exclusive game Sunset Overdrive; without a formal agreement in place, discussions about the ..</item>
+    </array>
+    <array name="gameName">
+        <item>Assassin\'s creed</item>
+        <item>Days gone</item>
+        <item>Spider man</item>
+    </array>
+</resources>
