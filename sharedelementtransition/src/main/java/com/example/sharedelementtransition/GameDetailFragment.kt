@@ -1,5 +1,6 @@
 package com.example.sharedelementtransition
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.transition.TransitionInflater
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 class GameDetailFragment : Fragment() {
@@ -32,14 +34,12 @@ class GameDetailFragment : Fragment() {
 
     companion object {
         fun addFragment(
+            context: Context,
             container: Int,
             fm: FragmentManager,
             resId: Int,
             title: String,
-            desc: String,
-            sharedView: View,
-            sharedElementString: String
-        ) {
+            desc: String) {
             val bundle = Bundle().also {
                 it.putInt("RES_ID", resId)
                 it.putString("TITLE", title)
@@ -48,10 +48,7 @@ class GameDetailFragment : Fragment() {
             val gameDetailFragment = GameDetailFragment()
             gameDetailFragment.arguments = bundle
             val ft = fm.beginTransaction()
-            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-            ft.addSharedElement(sharedView, sharedElementString)
             ft.replace(container, gameDetailFragment)
-            ft.addToBackStack(null)
             ft.commit()
         }
     }

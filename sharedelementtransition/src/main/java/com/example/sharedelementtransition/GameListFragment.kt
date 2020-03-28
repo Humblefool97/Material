@@ -1,11 +1,13 @@
 package com.example.sharedelementtransition
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -54,7 +56,7 @@ class GameListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         gameRecyclerView.layoutManager = LinearLayoutManager(activity)
-        val adapter = GameRecyclerViewAdapter(activity as Context,::onItemSelected)
+        val adapter = GameRecyclerViewAdapter(activity as Context, ::onItemSelected)
 
         gameRecyclerView.adapter = adapter
         adapter.setGameList(gameList)
@@ -68,12 +70,29 @@ class GameListFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    fun onItemSelected(position: Int,sharedView:View) {
-        GameDetailFragment.addFragment(
-            R.id.fragmentContainer
-            , activity!!.supportFragmentManager,
-            gameList[position].image, gameList[position].name, gameList[position].description,sharedView,getString(R.string.transition_string_image)
-        )
+    fun onItemSelected(position: Int, sharedView: View) {
+        /*  GameDetailFragment.addFragment(activity!!,
+              R.id.fragmentContainer
+              , activity!!.supportFragmentManager,
+              gameList[position].image, gameList[position].name, gameList[position].description
+          )*/
+        with(gameList[position]) {
+            val resId = image
+            val title = name
+            val description = description
+            val bundle = Bundle().also {
+                it.putInt(GameDetailActivity.KEY_RESOURCE_ID,resId)
+                it.putString(GameDetailActivity.KEY_TITLE,title)
+                it.putString(GameDetailActivity.KEY_DESCRIPTION,description)
+            }
+            val intent = Intent(activity,GameDetailActivity::class.java).also {
+               it.putExtras(bundle)
+            }
+            val transitionName = getString(R.string.transition_string_image)
+            val options = activity?.let { ActivityOptionsCompat.makeSceneTransitionAnimation(it,sharedView,transitionName) }
+            startActivity(intent,options?.toBundle())
+        }
+
     }
 
 
